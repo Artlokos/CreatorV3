@@ -1,0 +1,178 @@
+/* Базовые стили */
+:root {
+  --font-size-base: clamp(1rem, 2vw, 1.2rem);
+  --font-size-large: clamp(1.5rem, 3vw, 2rem);
+  --font-size-xlarge: clamp(2rem, 4vw, 3rem);
+  --font-size-small: clamp(0.8rem, 1.5vw, 1rem);
+  
+  --spacing-small: clamp(0.5rem, 1vw, 1rem);
+  --spacing-medium: clamp(1rem, 2vw, 1.5rem);
+  --spacing-large: clamp(1.5rem, 3vw, 2.5rem);
+  --spacing-xlarge: clamp(2rem, 4vw, 3.5rem);
+  
+  --max-width: clamp(20rem, 90vw, 75rem);
+  --card-width: clamp(18rem, 30vw, 25rem);
+  --card-height: clamp(25rem, 40vw, 30rem);
+}
+
+/* Общие стили */
+body {
+  font-size: var(--font-size-base);
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: var(--spacing-medium);
+}
+
+/* Шапка */
+.header {
+  text-align: center;
+  margin-bottom: var(--spacing-large);
+}
+
+.header__title {
+  font-size: var(--font-size-xlarge);
+  margin: var(--spacing-small) 0;
+}
+
+.header__subtitle {
+  font-size: var(--font-size-large);
+  margin-bottom: var(--spacing-medium);
+}
+
+.score {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--font-size-small);
+  margin-bottom: var(--spacing-small);
+}
+
+.header__theme-menu {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-medium);
+  margin-top: var(--spacing-medium);
+}
+
+.header__theme-menu-button {
+  padding: var(--spacing-small) var(--spacing-medium);
+  font-size: var(--font-size-small);
+}
+
+/* Основное содержимое */
+.main__body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xlarge);
+  flex: 1;
+}
+
+.card-section {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  width: var(--card-width);
+  height: var(--card-height);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--spacing-medium);
+  border-radius: clamp(0.5rem, 1.5vw, 1rem);
+}
+
+.card-title {
+  font-size: var(--font-size-large);
+  margin-bottom: var(--spacing-medium);
+}
+
+.img_container {
+  width: 100%;
+  height: 80%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-img {
+  position: absolute;
+  bottom: var(--spacing-small);
+  padding: var(--spacing-small) var(--spacing-medium);
+  font-size: var(--font-size-small);
+  border-radius: clamp(0.25rem, 0.75vw, 0.5rem);
+}
+
+/* SVG элементы */
+.freezer, .graver, .lazer {
+  width: 100%;
+  height: 100%;
+  max-height: 20rem;
+}
+
+/* Диалоговое окно */
+.dialog {
+  width: clamp(18rem, 80vw, 25rem);
+  padding: var(--spacing-large);
+  border-radius: clamp(0.5rem, 1.5vw, 1rem);
+}
+
+.dialog__text {
+  font-size: var(--font-size-large);
+  margin: var(--spacing-medium) 0;
+  text-align: center;
+}
+
+.dialog__button {
+  padding: var(--spacing-small) var(--spacing-large);
+  font-size: var(--font-size-base);
+}
+
+.dialog__floppy {
+  width: clamp(3rem, 10vw, 5rem);
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+/* Подвал */
+.block__footer {
+  margin-top: var(--spacing-xlarge);
+  padding: var(--spacing-medium) 0;
+  text-align: center;
+}
+
+/* Адаптивные медиа-запросы */
+@media (max-width: 768px) {
+  .header__theme-menu {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .card {
+    width: clamp(15rem, 80vw, 20rem);
+    height: auto;
+    min-height: 20rem;
+  }
+  
+  .img_container {
+    height: clamp(15rem, 50vw, 18rem);
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --font-size-base: clamp(0.9rem, 3vw, 1rem);
+  }
+  
+  .header__theme-menu-button {
+    width: 100%;
+  }
+}

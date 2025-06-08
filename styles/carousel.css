@@ -1,0 +1,66 @@
+Стили карусели
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 600px; /* Фиксированная ширина или на ваш выбор */
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.carousel__track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel__slide {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.carousel__slide img {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  /* aspect-ratio: 2/1; */
+}
+
+/* Кнопки "Вперед/Назад" */
+.carousel__button {
+  position: absolute;
+  top: 50%;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 10;
+}
+
+.carousel__button--prev {
+  left: 10px;
+}
+
+.carousel__button--next {
+  right: 10px;
+}
+
+/* Индикаторы (точки) */
+.carousel__indicators {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.carousel__indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ccc;
+  border: none;
+  cursor: pointer;
+}
+
+.carousel__indicator.active {
+  background: #333;
+}

@@ -1,0 +1,182 @@
+.lazer{
+	background-color: var(--main_background_color);
+    stroke: var(--svg_stroke_color);
+    stroke-width:3;
+    width:100%;
+}
+.lazer:hover{
+    transition: fill 1s linear;
+        .hinge_middle_all{
+            animation: slideInWithBounce 1s ease forwards;
+        }
+        .hinge_top_all,
+        .rod_top_all,
+        .lazer_head,
+        .lazer_head_middle,
+        .lazer_head_glass
+        {
+           animation: slideHinge 1s ease forwards;
+        }
+        .rod_middle
+         {
+           transform-box: fill-box;
+           transform-origin: 48px 70px;
+}
+        .vertical_lazerbeam{
+          opacity: 0;
+          animation: fadeIn 1.2s 0.5s ease-out forwards;
+        }
+
+  .hinge_middle_all {
+    animation: slideMiddle 1s ease forwards;
+  }
+  .rod_middle {
+    animation: moveRod 1s ease forwards;
+  }
+  .hinge_top_all {
+    animation: slideTop 1s ease forwards;
+  }
+        .spark0   { animation: spark-fly 0.8s 0.2s ease infinite; }
+        .spark45  { animation: spark-fly 0.8s 0.2s ease infinite; }
+        .spark90  { animation: spark-fly 0.8s 0.1s ease infinite; }
+        .spark135 { animation: spark-fly 0.8s 0.2s ease infinite; }
+        .spark180 { animation: spark-fly 0.8s 0.1s ease infinite; }
+        .spark225 { animation: spark-fly 0.8s 0.2s ease infinite; }
+        .spark270 { animation: spark-fly 0.8s 0.1s ease infinite; }
+        .spark305 { animation: spark-fly 0.8s 0.2s ease infinite; }
+}
+
+@keyframes stretchRod {
+  0% {
+    transform: scaleX(1) scaleY(1);
+  }
+  50% {
+    transform: scaleX(1.5) scaleY(1); /* Меняем длину и угол */
+  }
+   100% {
+    transform: scaleX(1) scaleY(1);
+  }
+
+}
+
+@keyframes stretchY {
+  0% {
+    transform: scaleX(1) scaleY(1);
+  }
+  50% {
+    transform: scaleX(1.5) scaleY(0.5) translateY(60%); /* Меняем длину и угол */
+  }
+   100% {
+    transform: scaleX(1) scaleY(1);
+  }
+
+}
+
+@keyframes slideHinge {
+  0% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(1%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+
+
+.vertical_lazerbeam,.lazer_sparks{
+  stroke-width: 1;
+}
+
+
+/* .dott{
+  stroke: aqua;
+  stroke-width: 1;
+  rx:1;
+  ry:1;
+  cx:59;
+  cy:62;
+} */
+
+.hinge_middle{
+  cx:48;
+  cy:70;
+  rx:7.5;
+  ry:8;
+  fill:none;
+}
+
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInWithBounce {
+  0% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(10%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes move {
+  0% {
+    offset-distance: 0%;
+  }
+  100% {
+    offset-distance: 100%;
+  }
+}
+
+.lazer_sparks line {
+
+  transform-origin: 102.5px 100px;
+  opacity: 1;
+}
+
+/* Анимация с задержками для каждой искры */
+@keyframes spark-fly {
+  0% {
+    transform: scale(0.1);
+    opacity: 0.1;
+  }
+  50% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+}
+
+@keyframes slideMiddle {
+  0% { transform: translate(0, 0); }
+  50% { transform: translate(1px, -1px); }
+  100% { transform: translate(0, 0); }
+}
+
+@keyframes moveRod {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(1px, -1px) rotate(1deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+@keyframes slideTop {
+  0% { transform: translate(0, 0); }
+  50% { transform: translate(0px, 1px); }
+  100% { transform: translate(0, 0); }
+}

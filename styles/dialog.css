@@ -1,0 +1,133 @@
+.dialog{
+  inline-size: 100vw;
+  max-inline-size: 100%;
+  background: rgba(120, 120, 120, 0.97);
+  padding: 50px 50px 0px 50px;
+
+}
+.dialog_form{
+}
+
+.dialog_container{
+  display: grid;
+  gap: 50px;
+  /* border:5px solid green; */
+  grid-template-areas:
+    "A A"
+    "B C"
+    "B C"
+    "D D";
+}
+
+.dialog_header{
+  grid-area: A;
+  text-align: center;
+}
+
+.dialog_img_container{
+  grid-area: B;
+}
+
+.dialog_img{
+  
+  max-block-size: 500px;
+  max-inline-size: 500px;
+  aspect-ratio: 1/1;
+}
+
+.dialog_content{
+  max-width: 300px;
+  grid-area: C;
+}
+
+.dialog_text {
+  font-size: var(--font-size-base);
+}
+
+.dialog_button{
+grid-area: D;
+align-content: center;
+align-items: center;
+text-align: center;
+outline: 1px solid black;
+padding: 5px;
+border-radius: 5px;
+}
+
+.dialog_button:active{
+grid-area: D;
+align-content: center;
+align-items: center;
+text-align: center;
+outline: 2px solid black;
+border-radius: 5px;
+padding: 5px;
+color:var(--header_section_color_hover);
+}
+
+.dialog_close-btn {
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 44px;
+  cursor: pointer;
+  color: #555;
+  padding: 0;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dialog_close-btn:hover {
+  color: #000;
+}
+
+@media (width < 769px) {
+  .dialog{
+    position: relative;
+    inline-size: 90vw;
+    display: flex;
+    flex-direction: column;
+    padding: 2px;
+    align-items: center;
+    z-index: 40;
+  }
+  .dialog_form{
+    inline-size: 50vw;
+    display: flex;
+    flex-direction: column;
+  }
+  .dialog_container{
+    position: relative;
+    inline-size: 50vw;
+    display: flex;
+    flex-direction: column;
+  }
+  .dialog_img_container{
+    width: 50vw;
+  }
+  .dialog_img{
+    width: 50vw;
+  }
+  .dialog_close-btn {
+  position: absolute;
+  top: -10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 44px;
+  cursor: pointer;
+  color: #ffffff;
+  padding: 0;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+}
+}

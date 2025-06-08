@@ -1,0 +1,70 @@
+.freezer{
+    background-color: var(--main_background_color);
+    fill:var(--svg_stroke_color);
+    width:100%;
+}
+.freezer:hover{
+    .gtraceCl{
+        animation: fadeIn 1s ease-in forwards;
+    }
+    .gmillingCl {
+        animation: slideInWithBounce 1s ease-in forwards;
+    }
+    .gdrillCl{
+        animation: slideInWithBounce 1s ease-in forwards;
+    }
+    .drill-groove{
+    animation: drill-rotation 0.05s ease-in-out forwards infinite;
+}
+}
+
+.drill-fill {
+  fill:var(--main_background_color);
+}
+
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInWithBounce {
+  0% {
+    transform: translateX(-10%);
+    opacity: 1;
+  }
+  80% {
+    transform: translateX(10%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-10%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes drill-rotation {
+  0% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(2%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}

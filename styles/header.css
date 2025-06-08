@@ -1,0 +1,21 @@
+ .header {
+    text-align: center;
+    margin-block-start: 50px;
+    margin-block-end: 50px;
+}
+
+.header_title {
+  color: var(--header_title__text-color);
+  font-size: var(--font-size-xlarge);
+  text-shadow: 0px var(--header_title__text-shadow_offset) 0px var(--header_title__text-shadow);
+  font-family: "M10", serif;
+  align-self: end;
+}
+
+.header_subtitle {
+  align-self: self-start;
+  font-family: "NES_rus", serif;
+  color: var(--subtitle__text-color);
+  font-size: var(--font-size-medium);
+  font-size: clamp(1.2rem, 2vw, 4.5rem);
+}
