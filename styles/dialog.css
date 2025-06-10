@@ -1,10 +1,21 @@
 .dialog{
-  inline-size: 100vw;
+  display:none;
+  inline-size: 1vw;
+}
+
+.dialog_is_opened{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  inline-size: 90vw;
+  padding: 2px;
+  align-items: center;
+  z-index: 4;
   max-inline-size: 100%;
   background: rgba(120, 120, 120, 0.97);
   padding: 50px 50px 0px 50px;
-
 }
+
 .dialog_form{
 }
 
@@ -87,15 +98,21 @@ color:var(--header_section_color_hover);
 }
 
 @media (width < 769px) {
+
   .dialog{
+    display: none;
     position: relative;
-    inline-size: 90vw;
-    display: flex;
-    flex-direction: column;
-    padding: 2px;
-    align-items: center;
-    z-index: 40;
   }
+  .dialog_is_opened{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  inline-size: 100vw;
+  padding: 2px;
+  align-items: center;
+  z-index: 4;
+}
+
   .dialog_form{
     inline-size: 50vw;
     display: flex;

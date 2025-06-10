@@ -1,7 +1,5 @@
 const dialog = document.getElementById('dialog');
-const dialogHeader =dialog.querySelector('.dialog_header')
 const dialogImg = dialog.querySelector('img');
-const dialogText = dialog.querySelector('.dialog_text');
 const closeBtn = document.querySelector('.dialog_close-btn');
 
   // Контент для каждой карточки
@@ -26,22 +24,23 @@ const closeBtn = document.querySelector('.dialog_close-btn');
   // Обработчики для кнопок карточек
   document.querySelectorAll('.card-section button').forEach(button => {
     button.addEventListener('click', function() {
+      
       const sectionId = this.closest('.card-section').id;
       const content = cardContents[sectionId];
-      // Устанавливаем контент
+
       dialogImg.src = content.imgSrc;
       dialogImg.alt = content.title;
-      dialogHeader.innerHTML = content.title;
-      dialogText.innerHTML = content.text;
-      // Показываем диалог
-      dialog.showModal();
+      dialog.classList.add("dialog_is_opened");
     });
   });
 
 closeBtn.addEventListener('click', () => {
-  dialog.close();
-  dialog.setAttribute("hidden",true);
+  dialog.classList.remove("dialog_is_opened");
 });
 
-dialog.addEventListener('click', (e) => {if (e.target === dialog) {dialog.close();}});
-document.addEventListener('keydown', (e) => {if (e.key === 'Escape' && dialog.open) {dialog.close();}});
+dialog.addEventListener('click', (e) => {if (e.target === dialog) {
+  dialog.classList.remove("dialog_is_opened");
+}});
+document.addEventListener('keydown', (e) => {if (e.key === 'Escape' && dialog.open) {
+  dialog.classList.remove("dialog_is_opened");
+}});

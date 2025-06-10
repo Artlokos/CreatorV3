@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const navButtons = document.querySelectorAll('.header__theme-menu-button');
   
   // Получаем основную секцию
-  const mainBody = document.getElementById('main_body');
+  const mainBody = document.getElementById('card_list');
   
   // Для каждой кнопки добавляем обработчик клика
   navButtons.forEach(button => {
@@ -46,8 +46,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
   
-  // Инициализация - делаем первую кнопку активной
-  navButtons[0].disabled = true;
 });
 
 

@@ -14,59 +14,66 @@
 	<link rel="stylesheet" href="./styles/cards.css">
 	<link rel="stylesheet" href="./styles/header.css">
 	<link rel="stylesheet" href="./styles/footer.css">
-	<link rel="stylesheet" href="./styles/milling.css" />
-	<link rel="stylesheet" href="./styles/graver.css" />
-	<link rel="stylesheet" href="./styles/lazer.css" />
 	<link rel="stylesheet" href="./styles/dialog.css" />
-	<link rel="stylesheet" href="./styles/carousel.css" />
 	<link rel="stylesheet" href="./styles/paralax.css" />
 	<link rel="stylesheet" href="./styles/contacts.css" />
+	<link rel="stylesheet" href="./styles/themes.css" />
 	<title>Мастерская Creator</title>
 </head>
 
 <body class="page">
 	<header class="header">
 		<h1 class="header_title">Creator</h1>
-		<p class="header_subtitle">Мастерская, воплощающая мечты</p>
 	</header>
+
 	<main class="main">
-		<section class="main_body" id="main_body">
-			<article class="card-section" id="frezer">
-				<article class="card">
+		<section class="card_list" id="card_list">
+			<article class="card-section wood-texture" id="frezer">
 					<h2 class="card_title">Фрезер</h2>
-					<button class="card-img" type="button" onclick="window['dialog'].showModal()">
-						<div class="img_container">
+					<button class="card_img_button wood-texture" type="button">
+						<div class="img_container wood-texture">
+							<img src="./images/jpg/g2.jpg" alt="Гравер" class="card_img">
+							<img src="./images/jpg/g2.jpg" alt="Гравер" class="card_img">
+							<img src="./images/jpg/g2.jpg" alt="Гравер" class="card_img">
+							<img src="./images/jpg/g2.jpg" alt="Гравер" class="card_img">
 						</div>
 					</button>
-				</article>
 			</article>
-			<article class="card-section" id="lazer">
-				<article class="card">
+			<article class="card-section wood-texture" id="lazer">
 					<h2 class="card_title">Лазер</h2>
-					<button class="card_button" type="button" onclick="window['dialog'].showModal()">
-						<div class="img_container">							
-						</div>
-					</button>
-				</article>
-			</article>
-			<article class="card-section" id="graver">
-				<article class="card">
-					<h2 class="card_title">Гравер</h2>
-					<button class="card-img" type="button" onclick="window['dialog'].showModal()">
+					<button class="card_img_button wood-texture" type="button">
 						<div class="img_container">
+							<img src="./images/jpg/g3.jpg" alt="Гравер" class="card_img">
+							<img src="./images/jpg/g3.jpg" alt="Гравер" class="card_img">
+							<img src="./images/jpg/g3.jpg" alt="Гравер" class="card_img">
+							<img src="./images/jpg/g3.jpg" alt="Гравер" class="card_img">							
 						</div>
 					</button>
-				</article>
+			</article>
+			<article class="card-section wood-texture" id="graver">
+					<h2 class="card_title">Гравер</h2>
+					<button class="card_img_button wood-texture" type="button">
+						<div class="img_container wood-texture">
+							<img src="./images/jpg/g4.jpg" alt="Гравер" class="card_img">
+							<img src="./images/jpg/g4.jpg" alt="Гравер" class="card_img">
+							<img src="./images/jpg/g4.jpg" alt="Гравер" class="card_img">
+							<img src="./images/jpg/g4.jpg" alt="Гравер" class="card_img">
+						</div>
+					</button>
 			</article>
 		</section>
 
-		<section class="parallax-gallery">
-			<div class="parallax-gallery__container">
-				<h2 class="parallax-gallery__title">Галерея</h2>
+		<section class="contacts">
+			
+		</section>
+	</main>
 
+	<div class="dialog" id="dialog">
+			<button class="dialog_close-btn" type="button" aria-label="Закрыть">&times;</button>
+			<div class="dialog_container">
+				<h2 class="parallax-gallery__title">Галерея</h2>
 				<div class="paralax_carousel">
 					<div class="paralax_carousel__track">
-						<!-- Слайды с параллакс-эффектом -->
 						<div class="paralax_carousel__slide">
 							<div class="parallax-layer" data-speed="0.1">
 								<img src="./images/jpg/g1.jpg" alt="Изображение 1">
@@ -74,7 +81,6 @@
 							<div class="paralax_slide-caption">
 							</div>
 						</div>
-
 						<div class="paralax_carousel__slide">
 							<div class="parallax-layer" data-speed="0.1">
 								<img src="./images/jpg/g2.jpg" alt="Изображение 2">
@@ -82,7 +88,6 @@
 							<div class="paralax_slide-caption">
 							</div>
 						</div>
-
 						<div class="paralax_carousel__slide">
 							<div class="parallax-layer" data-speed="0.1">
 								<img src="./images/jpg/g3.jpg" alt="Изображение 3">
@@ -97,7 +102,6 @@
 						aria-label="Предыдущий слайд">❮</button>
 					<button class="paralax_carousel__button paralax_carousel__button--next"
 						aria-label="Следующий слайд">❯</button>
-
 					<div class="paralax_carousel__indicators">
 						<button class="paralax_carousel__indicator" data-slide="0"
 							aria-label="Перейти к слайду 1"></button>
@@ -108,12 +112,7 @@
 					</div>
 				</div>
 			</div>
-		</section>
-
-		<section class="contacts">
-			
-		</section>
-	</main>
+	</div>
 
 	<footer class="block__footer">
 		<div class="contacts__container">
@@ -158,20 +157,8 @@
 	<script src="./scripts/cards.js"></script>
 </body>
 
-</html>
 
-	<dialog class="dialog" id="dialog" style="visibility: hidden;">
-			<button class="dialog_close-btn" type="button" aria-label="Закрыть">&times;</button>
-			<div class="dialog_container">
-				<h3 class="dialog_header"></h3>
-				<div class="dialog_img_container">
-					<img class="dialog_img" src="" alt="">
-				</div>
-				<div class="dialog_content">
-					<p class="dialog_text"></p>
-				</div>
-				<a href="https://wa.me/79147304889" class="dialog_button" target="_blank" rel="noopener">
-					<p class="dialog_button_text"> WhatsApp для связи</p>
-				</a>
-			</div>
-	</dialog>
+
+
+
+	</html>

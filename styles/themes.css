@@ -1,0 +1,17 @@
+/* Светлая тема */
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg-color: #b1abab;
+    --text-color: #333333;
+    --header_section_color:red;
+  }
+}
+
+/* Темная тема */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #949090;
+    --text-color: #f0f0f0;
+    --header_section_color:red;
+  }
+}

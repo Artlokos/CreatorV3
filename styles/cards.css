@@ -1,20 +1,19 @@
-.main_body {
+.card_list {
   position: relative;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--spacing-xlarge);
 }
 
-
 .card-section {
-  background-color: var(--card_background_color);
+  background-color: var(--bg_wood_texture);
   width: 100%;
   max-width: 400px;
   margin: 0 auto;
-  overflow: hidden; 
   white-space: normal;
   transition: all 0.3s ease;
   transform-origin: center;
+  border-radius: 15px;
 }
 
 .card-section.active {
@@ -25,7 +24,6 @@
   margin: 2rem auto;
 }
 
-/* Дополнительные стили для лучшего визуального эффекта */
 .card-section:not(.active) {
   opacity: 0.8;
   filter: blur(1px);
@@ -36,30 +34,28 @@
   filter: blur(0px);
 }
 
-.card {
-  display: flex;
-  flex-direction: column;
-  max-width: 100%;
-  height: 100%;
+.card_img_button{
+  border: none;
 }
 
-.card_title {
-  font-size: var(--font-size-base);
-  color: var(--main_background_color);
+.card_title{
   text-align: center;
-  white-space: normal; /* Добавил для правильного отображения заголовка */
 }
 
 .img_container {
   display: flex;
-  flex-direction: column;
-  padding: 5px;
-  gap: 20px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
 }
 
-.lazer{
+.card_img{
+  width:45px;
   aspect-ratio: 1/1;
+  border-radius: 5px;
 }
+
 
 .card_start {
   display: inline-block; /* Для корректной работы transform */
@@ -77,14 +73,14 @@
 
 /* Планшеты (769px - 1023px) */
 @media (min-width: 769px) and (max-width: 1023px) {
-  .main_body {
+  .card_list {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 /* Компьютеры (1024px и больше) */
 @media (min-width: 1024px) {
-  .main_body {
+  .card_list {
     grid-template-columns: repeat(3, 1fr);
   }
 }
