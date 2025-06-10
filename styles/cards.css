@@ -3,10 +3,12 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--spacing-xlarge);
+  overflow-y: hidden;
+  
 }
 
 .card-section {
-  background-color: var(--bg_wood_texture);
+  background: var(--card_background_color);
   width: 100%;
   max-width: 400px;
   margin: 0 auto;
@@ -14,6 +16,7 @@
   transition: all 0.3s ease;
   transform-origin: center;
   border-radius: 15px;
+  overflow-y: hidden;
 }
 
 .card-section.active {
@@ -26,16 +29,17 @@
 
 .card-section:not(.active) {
   opacity: 0.8;
-  filter: blur(1px);
+  /* filter: blur(1px); */
 }
 
 .card-section:hover{
    opacity: 1;
-  filter: blur(0px);
+  /* filter: blur(0px); */
 }
 
 .card_img_button{
   border: none;
+  background: var(--card_background_color);
 }
 
 .card_title{
@@ -48,6 +52,9 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
+  overflow-y: hidden;
+  height: 50px;
+  background: var(--card_background_color);
 }
 
 .card_img{
@@ -70,27 +77,3 @@
   color: var(--main_background_color);
   transform: scale(1.5) translateZ(0); /* Активация аппаратного ускорения */
 }
-
-/* Планшеты (769px - 1023px)
-@media (min-width: 769px) and (max-width: 1023px) {
-  .card_list {
-    grid-template-columns: repeat(2, 1fr);
-  }
-} */
-
-/* Компьютеры (1024px и больше)
-@media (min-width: 1024px) {
-  .card_list {
-    grid-template-columns: repeat(3, 1fr);
-  }
-} */
-
-/* @media (width < 769px) {
-.card-section.active {
-  position:absolute;
-  transform: none;
-  z-index: 3;
-  position: relative;
-  margin: auto;
-}
-} */

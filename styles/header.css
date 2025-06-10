@@ -1,16 +1,23 @@
  .header {
-    text-align: center;
-    margin-block-start: 50px;
-    margin-block-end: 50px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  font-family: "title", serif;
+  background-image: url("../images/jpg/header1.webp");
+  background-size: cover;
+  height: 230px;
     
 }
 
 .header_title {
   color: var(--header_title__text-color);
-  font-size: var(--font-size-xlarge);
+  font-family: "title", serif;
+  font-size: 36px;
   text-shadow: 0px var(--header_title__text-shadow_offset) 0px var(--header_title__text-shadow);
-  font-family: "M10", serif;
-  align-self: end;
+  padding: 0px 10px;
+  background: rgb(1, 162, 255,0.5);
+  margin-top: 10px;
+
 }
 
 .header_subtitle {
@@ -19,4 +26,9 @@
   color: var(--subtitle__text-color);
   font-size: var(--font-size-medium);
   font-size: clamp(1.2rem, 2vw, 4.5rem);
+}
+
+.header_logo{
+  width: 70vw;
+  height: 50px;
 }

@@ -12,9 +12,10 @@
   align-items: center;
   z-index: 4;
   max-inline-size: 100%;
-  background: rgba(120, 120, 120, 0.97);
+  background: transparent;
   padding: 50px 50px 0px 50px;
   border-radius: 15px;
+  border: 2px solid var(--card_background_color)
 }
 
 .dialog_form{

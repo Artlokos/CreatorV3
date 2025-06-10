@@ -35,7 +35,14 @@
 
 @font-face {
   font-family: 'card_title';
-  src: url(./ofont.ru_Gehaks.ttf) format('ttf');
+  src: url(./ofont.ru_Gehaks.ttf) format('truetype');
+  font-weight: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'title';
+  src: url(./ofont.ru_Arkhip.ttf) format('truetype');
   font-weight: normal;
   font-display: swap;
 }

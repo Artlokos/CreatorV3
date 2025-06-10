@@ -12,10 +12,14 @@
 /* Темная тема */
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg-color: #949090;
+    --bg-color: #1f2233;
+    /* --bg-color: url("../images/jpg/metall.webp"); */
     --text-color: #f0f0f0;
     --header_section_color:rgb(214, 214, 214);
-      --header_title__text-color:rgb(20, 20, 20);
-  --header_title__text-shadow: rgb(179, 180, 182);
+    --header_title__text-color:rgb(255, 251, 251);
+    --header_title__text-shadow: rgb(179, 180, 182);
+    
+    --card_background_color:#0149bf;
+    --card_background_color_hover:rgba(140,140,140,1);
   }
 }
