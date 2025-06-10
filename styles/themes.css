@@ -3,7 +3,7 @@
   :root {
     --bg-color: #b1abab;
     --text-color: #333333;
-    --header_section_color:red;
+    --header_section_color:rgb(214, 214, 214);
   }
 }
 
@@ -12,6 +12,6 @@
   :root {
     --bg-color: #949090;
     --text-color: #f0f0f0;
-    --header_section_color:red;
+    --header_section_color:rgb(214, 214, 214);
   }
 }

@@ -71,21 +71,21 @@
   transform: scale(1.5) translateZ(0); /* Активация аппаратного ускорения */
 }
 
-/* Планшеты (769px - 1023px) */
+/* Планшеты (769px - 1023px)
 @media (min-width: 769px) and (max-width: 1023px) {
   .card_list {
     grid-template-columns: repeat(2, 1fr);
   }
-}
+} */
 
-/* Компьютеры (1024px и больше) */
+/* Компьютеры (1024px и больше)
 @media (min-width: 1024px) {
   .card_list {
     grid-template-columns: repeat(3, 1fr);
   }
-}
+} */
 
-@media (width < 769px) {
+/* @media (width < 769px) {
 .card-section.active {
   position:absolute;
   transform: none;
@@ -93,4 +93,4 @@
   position: relative;
   margin: auto;
 }
-}
+} */
