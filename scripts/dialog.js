@@ -27,7 +27,6 @@ const closeBtn = document.querySelector('.dialog_close-btn');
       
       const sectionId = this.closest('.card-section').id;
       const content = cardContents[sectionId];
-
       dialogImg.src = content.imgSrc;
       dialogImg.alt = content.title;
       dialog.classList.add("dialog_is_opened");

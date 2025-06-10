@@ -4,6 +4,8 @@
     --bg-color: #b1abab;
     --text-color: #333333;
     --header_section_color:rgb(214, 214, 214);
+      --header_title__text-color:rgb(85 85 85);
+     --header_title__text-shadow: rgb(255 248 235);
   }
 }
 
@@ -13,5 +15,7 @@
     --bg-color: #949090;
     --text-color: #f0f0f0;
     --header_section_color:rgb(214, 214, 214);
+      --header_title__text-color:rgb(20, 20, 20);
+  --header_title__text-shadow: rgb(179, 180, 182);
   }
 }

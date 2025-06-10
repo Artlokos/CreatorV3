@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
   function init() {
     updateCarousel();
     setupParallax();
-    startAutoSlide();
+    // startAutoSlide();
   }
   
   // Обновление позиции карусели
@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     paralax_carousel.addEventListener('mouseleave', () => {
-      startAutoSlide();
+      // startAutoSlide();
     });
   }
   

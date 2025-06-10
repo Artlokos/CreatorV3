@@ -22,8 +22,8 @@
 
 .paralax_carousel {
   position: relative;
-  width: 100%;
-  height: 500px;
+  width: 150%;
+  height: 300px;
   overflow: hidden;
   border-radius: 10px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
