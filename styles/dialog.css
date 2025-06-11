@@ -14,14 +14,11 @@
    z-index: 4;
   max-inline-size: 100%;
  background: var(--card_background_color);
- padding: 50px 50px 0px 50px; 
+ padding: 50px; 
   border-radius: 15px;
   border: 2px solid var(--card_background_color)
 }
 
-.dialog_container{
-  padding: 50px 0px;
-}
 
 .dialog_button{
 align-content: center;
@@ -99,4 +96,112 @@ border-radius: 5px;
   justify-content: center;
   z-index: 50;
 }
+}
+
+.paralax_carousel {
+  position: relative;
+  width: 150%;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+.paralax_carousel__track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.5s ease;
+}
+
+.paralax_carousel__slide {
+  min-width: 100%;
+  position: relative;
+}
+
+.parallax-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  will-change: transform;
+}
+
+.parallax-layer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+.paralax_slide-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  color: white;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.paralax_carousel__slide.active .paralax_slide-caption {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.paralax_carousel__button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background: rgba(255,255,255,0.3);
+  border: none;
+  border-radius: 50%;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+.paralax_carousel__button:hover {
+  background: rgba(255,255,255,0.5);
+}
+
+.paralax_carousel__button--prev {
+  left: 20px;
+}
+
+.paralax_carousel__button--next {
+  right: 20px;
+}
+
+.paralax_carousel__indicators {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+.paralax_carousel__indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.5);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.paralax_carousel__indicator.active {
+  background: white;
+  transform: scale(1.2);
 }
