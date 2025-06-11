@@ -60,7 +60,7 @@ body {
   color: var(--text-color);
   background-repeat: no-repeat;
   position: relative;
-  padding: 15px 0зx;
+  /* padding: 15px 0px; */
 }
 
 h1,

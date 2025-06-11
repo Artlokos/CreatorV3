@@ -4,79 +4,32 @@
 }
 
 .dialog_is_opened{
-  position: relative;
+  position: absolute;
+  top:5vh;
+  left: 5%;
   display: flex;
-  flex-direction: column;
+  flex-direction: column; 
   inline-size: 90vw;
-  padding: 2px;
   align-items: center;
-  z-index: 4;
+   z-index: 4;
   max-inline-size: 100%;
-  background: transparent;
-  padding: 50px 50px 0px 50px;
+ background: var(--card_background_color);
+ padding: 50px 50px 0px 50px; 
   border-radius: 15px;
   border: 2px solid var(--card_background_color)
 }
 
-.dialog_form{
-}
-
 .dialog_container{
-  /* display: grid; */
-  /* gap: 50px; */
-  /* border:5px solid green; */
-  /* grid-template-areas:
-    "A A"
-    "B C"
-    "B C"
-    "D D"; */
   padding: 50px 0px;
 }
 
-.dialog_header{
-  grid-area: A;
-  text-align: center;
-}
-
-.dialog_img_container{
-  grid-area: B;
-}
-
-.dialog_img{
-  
-  max-block-size: 500px;
-  max-inline-size: 500px;
-  aspect-ratio: 1/1;
-}
-
-.dialog_content{
-  max-width: 300px;
-  grid-area: C;
-}
-
-.dialog_text {
-  font-size: var(--font-size-base);
-}
-
 .dialog_button{
-grid-area: D;
 align-content: center;
 align-items: center;
 text-align: center;
 outline: 1px solid black;
 padding: 5px;
 border-radius: 5px;
-}
-
-.dialog_button:active{
-grid-area: D;
-align-content: center;
-align-items: center;
-text-align: center;
-outline: 2px solid black;
-border-radius: 5px;
-padding: 5px;
-color:var(--header_section_color_hover);
 }
 
 .dialog_close-btn {
@@ -87,13 +40,9 @@ color:var(--header_section_color_hover);
   border: none;
   font-size: 44px;
   cursor: pointer;
-  color: #555;
-  padding: 0;
+  color: #4b01f8;
   width: 50px;
   height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .dialog_close-btn:hover {
@@ -115,7 +64,9 @@ color:var(--header_section_color_hover);
     position: relative;
   }
   .dialog_is_opened{
-  position: relative;
+  position: absolute;
+  top:30vh;
+  left:0px;
   display: flex;
   flex-direction: column;
   inline-size: 100vw;
@@ -124,25 +75,14 @@ color:var(--header_section_color_hover);
   z-index: 4;
 }
 
-  .dialog_form{
-    inline-size: 50vw;
-    display: flex;
-    flex-direction: column;
-  }
-  .dialog_container{
+.dialog_container{
     position: relative;
-    inline-size: 50vw;
+    inline-size: 60vw;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  .dialog_img_container{
-    width: 50vw;
-  }
-  .dialog_img{
-    width: 50vw;
-  }
-  .dialog_close-btn {
+.dialog_close-btn {
   position: absolute;
   top: -10px;
   right: 10px;

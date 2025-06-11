@@ -1,6 +1,7 @@
 const dialog = document.getElementById('dialog');
 const dialogImg = dialog.querySelector('img');
 const closeBtn = document.querySelector('.dialog_close-btn');
+const cardSections = document.querySelectorAll('.card-section');
 
   // Контент для каждой карточки
   const cardContents = {
@@ -22,10 +23,10 @@ const closeBtn = document.querySelector('.dialog_close-btn');
   };
 
   // Обработчики для кнопок карточек
-  document.querySelectorAll('.card-section button').forEach(button => {
-    button.addEventListener('click', function() {
+  cardSections.forEach(card => {
+    card.addEventListener('click', function() {
       
-      const sectionId = this.closest('.card-section').id;
+      const sectionId = this.id;
       const content = cardContents[sectionId];
       dialogImg.src = content.imgSrc;
       dialogImg.alt = content.title;
@@ -36,10 +37,9 @@ const closeBtn = document.querySelector('.dialog_close-btn');
 closeBtn.addEventListener('click', () => {
   dialog.classList.remove("dialog_is_opened");
 });
-
 dialog.addEventListener('click', (e) => {if (e.target === dialog) {
   dialog.classList.remove("dialog_is_opened");
 }});
-document.addEventListener('keydown', (e) => {if (e.key === 'Escape' && dialog.open) {
+document.addEventListener('keydown', (e) => {if (e.key === 'Escape') {
   dialog.classList.remove("dialog_is_opened");
 }});
