@@ -28,7 +28,7 @@
 
 .card-section:not(.active) {
   opacity: 0.8;
-  filter: blur(1px);
+  /* filter: blur(1px); */
 }
 
 .card-section:hover {
