@@ -19,7 +19,8 @@
 .logo {
   fill:var(--header-logo-fill-color);
   stroke: var(--header-logo-stroke-color);
-  width: 75vw;
+  width: clamp(15vw,50vw,100vw);
+  height: auto;
 }
 
 @media (width>769px) {
@@ -32,8 +33,5 @@
     fill: var(--header_title__text-color);
     width: 60vw;
     text-align: right;
-  }
-  .logo {
-    width: 65vw;
   }
 }
