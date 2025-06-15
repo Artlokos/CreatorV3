@@ -20,7 +20,7 @@
 
 .card-section.active {
   position: absolute;
-  transform: scale(1.47);
+  transform: scale(1.1);
   z-index: 3;
   position: relative;
   margin: 2rem auto;

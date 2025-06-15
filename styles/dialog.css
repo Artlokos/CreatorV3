@@ -1,32 +1,34 @@
-.dialog{
-  display:none;
+.dialog {
+  display: none;
   inline-size: 1vw;
+  /* height: 10vh; */
 }
 
-.dialog_is_opened{
+.dialog_is_opened {
   position: absolute;
-  top:5vh;
-  left: 5%;
+  position: fixed;
+  top: 0vh;
+  left: 0%;
   display: flex;
-  flex-direction: column; 
-  inline-size: 90vw;
+  flex-direction: column;
+  inline-size: 100vw;
+  block-size: 100vh;
   align-items: center;
-   z-index: 4;
+  z-index: 4;
   max-inline-size: 100%;
- background: var(--card_background_color);
- padding: 50px; 
+  background: var(--card_background_color);
+  padding: 50px;
   border-radius: 15px;
-  border: 2px solid var(--card_background_color)
+  border: 2px solid var(--card_background_color);
 }
 
-
-.dialog_button{
-align-content: center;
-align-items: center;
-text-align: center;
-outline: 1px solid black;
-padding: 5px;
-border-radius: 5px;
+.dialog_button {
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  outline: 1px solid black;
+  padding: 5px;
+  border-radius: 5px;
 }
 
 .dialog_close-btn {
@@ -46,75 +48,83 @@ border-radius: 5px;
   color: #000;
 }
 
-  .dialog_container{
-    position: relative;
-    inline-size: 50vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+.dialog_container {
+  position: relative;
+  inline-size: 50vw;
+  block-size: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 @media (width < 769px) {
-
-  .dialog{
+  .dialog {
     display: none;
     position: relative;
   }
-  .dialog_is_opened{
-  position: absolute;
-  top:30vh;
-  left:0px;
-  display: flex;
-  flex-direction: column;
-  inline-size: 100vw;
-  padding: 2px;
-  align-items: center;
-  z-index: 4;
-}
+  .dialog_is_opened {
+    position: absolute;
+    top: 30vh;
+    left: 0px;
+    display: flex;
+    flex-direction: column;
+    inline-size: 100vw;
+    padding: 2px;
+    align-items: center;
+    z-index: 4;
+  }
 
-.dialog_container{
+  .dialog_container {
     position: relative;
     inline-size: 60vw;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-.dialog_close-btn {
-  position: absolute;
-  top: -10px;
-  right: 10px;
-  background: none;
-  border: none;
-  font-size: 44px;
-  cursor: pointer;
-  color: #ffffff;
-  padding: 0;
-  width: 50px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 50;
-}
+  .dialog_close-btn {
+    position: absolute;
+    top: -10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+    color: #ffffff;
+    padding: 0;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+  }
 }
 
 .paralax_carousel {
   position: relative;
   width: 150%;
+  height: 90vh;
   overflow: hidden;
   border-radius: 10px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  aspect-ratio: 2/1;
+  aspect-ratio: 1/1;
 }
 .paralax_carousel__track {
   display: flex;
-  height: 100%;
+  height: 80vh;
   transition: transform 0.5s ease;
+  will-change: transform;
 }
 
 .paralax_carousel__slide {
   min-width: 100%;
   position: relative;
+  flex: 0 0 100%;
+  width: 100%;
+  height: 80vh;
+  background-size: cover;
+  background-position: center;
+  transition: opacity 1.5s ease-in-out;
 }
 
 .parallax-layer {
@@ -131,6 +141,7 @@ border-radius: 5px;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-fit: contain;
   transform: scale(1.1);
   transition: transform 0.3s ease;
 }
@@ -141,7 +152,7 @@ border-radius: 5px;
   left: 0;
   width: 100%;
   padding: 2rem;
-  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
   color: white;
   transform: translateY(20px);
   opacity: 0;
@@ -157,9 +168,9 @@ border-radius: 5px;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 50px;
-  height: 50px;
-  background: rgba(255,255,255,0.3);
+  width: 25px;
+  height: 25px;
+  background: rgba(255, 255, 255, 0.3);
   border: none;
   border-radius: 50%;
   color: white;
@@ -170,7 +181,7 @@ border-radius: 5px;
 }
 
 .paralax_carousel__button:hover {
-  background: rgba(255,255,255,0.5);
+  background: rgba(255, 255, 255, 0.5);
 }
 
 .paralax_carousel__button--prev {
@@ -192,10 +203,10 @@ border-radius: 5px;
 }
 
 .paralax_carousel__indicator {
-  width: 12px;
-  height: 12px;
+  width: 8px;
+  height: 11px;
   border-radius: 50%;
-  background: rgba(255,255,255,0.5);
+  background: rgba(255, 255, 255, 0.5);
   border: none;
   cursor: pointer;
   transition: all 0.3s ease;

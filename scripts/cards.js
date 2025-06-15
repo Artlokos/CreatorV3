@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     button.addEventListener('click', (e) => {
       e.preventDefault();
             
-      const targetId = this.getAttribute('id');
+      const targetId = e.currentTarget.id;
       const targetSection = document.getElementById(targetId);
            
       resetActiveStates();
