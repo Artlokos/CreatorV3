@@ -37,7 +37,7 @@ border-radius: 5px;
   border: none;
   font-size: 44px;
   cursor: pointer;
-  color: #4b01f8;
+  color: #ffffff;
   width: 50px;
   height: 50px;
 }
@@ -101,10 +101,10 @@ border-radius: 5px;
 .paralax_carousel {
   position: relative;
   width: 150%;
-  height: 300px;
   overflow: hidden;
   border-radius: 10px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  aspect-ratio: 2/1;
 }
 .paralax_carousel__track {
   display: flex;

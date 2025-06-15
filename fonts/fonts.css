@@ -47,3 +47,9 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'header';
+  src: url(./header.ttf) format('truetype');
+  font-weight: normal;
+  font-display: swap;
+}

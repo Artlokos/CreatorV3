@@ -1,11 +1,13 @@
 /* Светлая тема */
 @media (prefers-color-scheme: light) {
   :root {
-    --bg-color: #b1abab;
-    --text-color: #333333;
-    --header_section_color:rgb(214, 214, 214);
-      --header_title__text-color:rgb(85 85 85);
-     --header_title__text-shadow: rgb(255 248 235);
+    --bg-color: #6fcff5;
+    --text-color: #6496d8;
+    --header_section_color: rgb(8, 150, 160);
+    --header_title__text-color: #6496d8;
+    --header_title__text-shadow: rgb(255 248 235);
+    --card_background_color: #0149bf;
+    --card_background_color_hover: rgba(140, 140, 140, 1);
   }
 }
 
@@ -13,13 +15,12 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --bg-color: #1f2233;
-    /* --bg-color: url("../images/jpg/metall.webp"); */
     --text-color: #f0f0f0;
-    --header_section_color:rgb(214, 214, 214);
-    --header_title__text-color:rgb(255, 251, 251);
+    --header_section_color: rgb(214, 214, 214);
+    --header_title__text-color: rgb(255, 251, 251);
     --header_title__text-shadow: rgb(179, 180, 182);
-    
-    --card_background_color:#0149bf;
-    --card_background_color_hover:rgba(140,140,140,1);
+
+    --card_background_color: #0149bf;
+    --card_background_color_hover: rgba(140, 140, 140, 1);
   }
 }
