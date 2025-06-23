@@ -26,7 +26,7 @@
 
 @media (width>769px) {
   .header {
-    height: 80vh;
+    height: 20vh;
   }
   .header_title {
     padding: 0px var(--header-padding);
