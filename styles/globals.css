@@ -9,7 +9,7 @@
   --font-size-medium: clamp(1.5rem, 2vw, 4.5rem);
   --font-size-large: clamp(2.5rem, 5vw, 10rem);
   --font-size-xlarge: clamp(5rem, 10vw, 20rem);
-  --header-height: clamp(198px, 50vh,800px);
+  --header-height: clamp(198px, 20vh, 800px);
   --header-font-size: clamp(3rem, 8vw, 16.5rem);
   --header-padding: clamp(1rem, 2vw, 10rem);
   
@@ -62,7 +62,6 @@ body {
   min-height: 100vh;
   font-size: var(--font-size-base);
   padding: 0; 
-  /* background-color: var(--bg_wood_texture); */
   color: var(--text-color);
   background-repeat: no-repeat;
   position: relative;

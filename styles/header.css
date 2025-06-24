@@ -3,15 +3,12 @@
   justify-content: end;
   align-items: center;
   font-family: 'title', serif;
-  /* background-image: url('../images/jpg/header1.webp'); */
   background-size: cover;
-  height: var(--header-height);
-  /* opacity: 50%; */
+  height:auto;
 }
 
 .header_title {
   padding: 0px var(--header-padding);
-  /* background: rgb(1, 162, 255, 0.5); */
   fill: var(--header_title__text-color);
   width: 70vw;
   text-align: right;
@@ -25,12 +22,8 @@
 }
 
 @media (width>769px) {
-  .header {
-    height: 20vh;
-  }
   .header_title {
     padding: 0px var(--header-padding);
-    /* background: rgb(1, 162, 255, 0.5); */
     fill: var(--header_title__text-color);
     width: 60vw;
     text-align: right;

@@ -1,7 +1,7 @@
 /* Светлая тема */
 @media (prefers-color-scheme: light) {
   :root {
-    --bg-color: #1f2233;
+    --bg-color: #000000;
     --text-color: #f0f0f0;
     --header_section_color: rgb(214, 214, 214);
     --header_title__text-color: rgb(255, 251, 251);
@@ -19,7 +19,7 @@
 /* Темная тема */
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg-color: #1f2233;
+    --bg-color: #000000;
     --text-color: #f0f0f0;
     --header_section_color: rgb(214, 214, 214);
     --header_title__text-color: rgb(255, 251, 251);
