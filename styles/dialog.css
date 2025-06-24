@@ -20,6 +20,7 @@
   padding: 50px;
   border-radius: 15px;
   border: 2px solid var(--card_background_color);
+  block-size: 100vh;
 }
 
 .dialog_button {
@@ -72,7 +73,7 @@
     padding: 2px;
     align-items: center;
     z-index: 4;
-    height: auto;
+    block-size: 100vh;
   }
 
   .dialog_container {
