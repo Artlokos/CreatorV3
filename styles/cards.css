@@ -1,7 +1,7 @@
 .card_list {
   position: relative;
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-template-columns: 1fr;
   gap: var(--spacing-xlarge);
   overflow-y: hidden;
@@ -47,7 +47,7 @@
 
 .img_container {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
   justify-content: center;
   gap: 10px;
   object-fit: contain;
@@ -75,5 +75,5 @@
 @media (width>769px) {
   .card_list {
     grid-template-columns: repeat(3, 1fr);
-  } 
+  }
 }
