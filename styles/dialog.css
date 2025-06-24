@@ -72,6 +72,7 @@
     padding: 2px;
     align-items: center;
     z-index: 4;
+    height: auto;
   }
 
   .dialog_container {
