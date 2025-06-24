@@ -6,7 +6,7 @@
 
 .dialog_is_opened {
   position: absolute;
-  position: fixed;
+  /* position: fixed; */
   top: 0vh;
   left: 0%;
   display: flex;
@@ -64,7 +64,7 @@
   }
   .dialog_is_opened {
     position: absolute;
-    top: 30vh;
+    top: 0vh;
     left: 0px;
     display: flex;
     flex-direction: column;
