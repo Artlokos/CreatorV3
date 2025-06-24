@@ -28,7 +28,6 @@
 
 .card-section:not(.active) {
   opacity: 0.8;
-  /* filter: blur(1px); */
 }
 
 .card-section:hover {
@@ -72,4 +71,10 @@
 
 .card_start:hover {
   color: var(--main_background_color);
+}
+
+@media (width>769px) {
+  .card_list {
+    grid-template-columns: repeat(3, 1fr);
+  } 
 }
