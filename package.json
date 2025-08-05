@@ -1,0 +1,28 @@
+{
+  "name": "creatorv3",
+  "version": "1.0.0",
+  "description": "CreatorV3 глубокий синий",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Artlokos/CreatorV3.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Artlokos/CreatorV3/issues"
+  },
+  "homepage": "https://github.com/Artlokos/CreatorV3#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "fs": "^0.0.1-security",
+    "multer": "^2.0.2",
+    "path": "^0.12.7"
+  }
+}

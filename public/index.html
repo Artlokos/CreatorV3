@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерея изображений</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .gallery-item {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 5px;
+            text-align: center;
+        }
+        .gallery-item img {
+            max-width: 100%;
+            height: auto;
+            max-height: 150px;
+        }
+        .upload-section {
+            margin: 30px 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+            border-radius: 5px;
+        }
+        .upload-btn {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+        .upload-btn:hover {
+            background-color: #45a049;
+        }
+        #fileInput {
+            display: none;
+        }
+        .preview {
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .preview-img {
+            max-width: 200px;
+            max-height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Галерея изображений</h1>
+    
+    <div class="gallery" id="galleryContainer">
+        <!-- Сюда будут загружаться изображения с сервера -->
+    </div>
+    
+    <div class="upload-section">
+        <h2>Добавить новые изображения</h2>
+        <input type="file" id="fileInput" accept="image/*" multiple>
+        <button class="upload-btn" onclick="document.getElementById('fileInput').click()">Выбрать фото</button>
+        <button class="upload-btn" id="uploadBtn">Загрузить на сервер</button>
+        
+        <div class="preview" id="previewContainer"></div>
+    </div>
+    
+    <script>
+        // Функция загрузки изображений с сервера
+        async function loadGalleryImages() {
+            try {
+                const response = await fetch('http://localhost:3000/api/images');
+                if (!response.ok) throw new Error('Ошибка загрузки изображений');
+                
+                const images = await response.json();
+                const galleryContainer = document.getElementById('galleryContainer');
+                galleryContainer.innerHTML = '';
+                
+                if (images.length === 0) {
+                    galleryContainer.innerHTML = '<p>В галерее пока нет изображений</p>';
+                    return;
+                }
+                
+                images.forEach(image => {
+                    const galleryItem = document.createElement('div');
+                    galleryItem.className = 'gallery-item';
+                    
+                    const img = document.createElement('img');
+                    img.src = 'http://localhost:3000/uploads/' + image;
+                    img.alt = image;
+                    
+                    galleryItem.appendChild(img);
+                    galleryContainer.appendChild(galleryItem);
+                });
+            } catch (error) {
+                console.error('Ошибка загрузки галереи:', error);
+                alert('Не удалось загрузить изображения: ' + error.message);
+            }
+        }
+        
+        // Загрузка изображений при открытии страницы
+        document.addEventListener('DOMContentLoaded', loadGalleryImages);
+        
+        // Логика загрузки новых изображений
+        const fileInput = document.getElementById('fileInput');
+        const uploadBtn = document.getElementById('uploadBtn');
+        const previewContainer = document.getElementById('previewContainer');
+        
+        let selectedFiles = [];
+        
+        fileInput.addEventListener('change', function(e) {
+            selectedFiles = Array.from(e.target.files);
+            previewContainer.innerHTML = '';
+            
+            selectedFiles.forEach(file => {
+                if (!file.type.match('image.*')) return;
+                
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const img = document.createElement('img');
+                    img.src = e.target.result;
+                    img.classList.add('preview-img');
+                    previewContainer.appendChild(img);
+                }
+                reader.readAsDataURL(file);
+            });
+        });
+        
+        uploadBtn.addEventListener('click', async function() {
+            if (selectedFiles.length === 0) {
+                alert('Пожалуйста, выберите файлы для загрузки');
+                return;
+            }
+            
+            const formData = new FormData();
+            selectedFiles.forEach(file => {
+                formData.append('photos', file);
+            });
+            
+            try {
+                const response = await fetch('http://localhost:3000/api/upload', {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                const result = await response.json();
+                
+                if (result.success) {
+                    alert(`Успешно загружено ${result.uploadedCount} фото`);
+                    fileInput.value = '';
+                    previewContainer.innerHTML = '';
+                    selectedFiles = [];
+                    // Обновляем галерею после загрузки
+                    loadGalleryImages();
+                } else {
+                    alert('Ошибка при загрузке: ' + (result.message || 'Неизвестная ошибка'));
+                }
+            } catch (error) {
+                alert('Ошибка сети: ' + error.message);
+            }
+        });
+    </script>
+</body>
+</html>
