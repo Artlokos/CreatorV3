@@ -12,6 +12,7 @@
   fill: var(--header_title__text-color);
   width: 70vw;
   text-align: right;
+  margin: 20px 0;
 }
 
 .logo {
